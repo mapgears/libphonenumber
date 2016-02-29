@@ -22,10 +22,10 @@
  * phonemetadata.proto.
  */
 
-goog.provide('i18n.phonenumbers.NumberFormat');
-goog.provide('i18n.phonenumbers.PhoneMetadata');
-goog.provide('i18n.phonenumbers.PhoneMetadataCollection');
-goog.provide('i18n.phonenumbers.PhoneNumberDesc');
+goog.provide('i18n_phonenumbers.NumberFormat');
+goog.provide('i18n_phonenumbers.PhoneMetadata');
+goog.provide('i18n_phonenumbers.PhoneMetadataCollection');
+goog.provide('i18n_phonenumbers.PhoneNumberDesc');
 
 goog.require('goog.proto2.Message');
 
@@ -36,25 +36,25 @@ goog.require('goog.proto2.Message');
  * @constructor
  * @extends {goog.proto2.Message}
  */
-i18n.phonenumbers.NumberFormat = function() {
+i18n_phonenumbers.NumberFormat = function() {
   goog.proto2.Message.call(this);
 };
-goog.inherits(i18n.phonenumbers.NumberFormat, goog.proto2.Message);
+goog.inherits(i18n_phonenumbers.NumberFormat, goog.proto2.Message);
 
 
 /**
  * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
- * @return {!i18n.phonenumbers.NumberFormat} The cloned message.
+ * @return {!i18n_phonenumbers.NumberFormat} The cloned message.
  * @override
  */
-i18n.phonenumbers.NumberFormat.prototype.clone;
+i18n_phonenumbers.NumberFormat.prototype.clone;
 
 
 /**
  * Gets the value of the pattern field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getPattern = function() {
+i18n_phonenumbers.NumberFormat.prototype.getPattern = function() {
   return /** @type {?string} */ (this.get$Value(1));
 };
 
@@ -63,7 +63,7 @@ i18n.phonenumbers.NumberFormat.prototype.getPattern = function() {
  * Gets the value of the pattern field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getPatternOrDefault = function() {
+i18n_phonenumbers.NumberFormat.prototype.getPatternOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(1));
 };
 
@@ -72,7 +72,7 @@ i18n.phonenumbers.NumberFormat.prototype.getPatternOrDefault = function() {
  * Sets the value of the pattern field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.setPattern = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.setPattern = function(value) {
   this.set$Value(1, value);
 };
 
@@ -80,7 +80,7 @@ i18n.phonenumbers.NumberFormat.prototype.setPattern = function(value) {
 /**
  * @return {boolean} Whether the pattern field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasPattern = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasPattern = function() {
   return this.has$Value(1);
 };
 
@@ -88,7 +88,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasPattern = function() {
 /**
  * @return {number} The number of values in the pattern field.
  */
-i18n.phonenumbers.NumberFormat.prototype.patternCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.patternCount = function() {
   return this.count$Values(1);
 };
 
@@ -96,7 +96,7 @@ i18n.phonenumbers.NumberFormat.prototype.patternCount = function() {
 /**
  * Clears the values in the pattern field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearPattern = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearPattern = function() {
   this.clear$Field(1);
 };
 
@@ -105,7 +105,7 @@ i18n.phonenumbers.NumberFormat.prototype.clearPattern = function() {
  * Gets the value of the format field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getFormat = function() {
+i18n_phonenumbers.NumberFormat.prototype.getFormat = function() {
   return /** @type {?string} */ (this.get$Value(2));
 };
 
@@ -114,7 +114,7 @@ i18n.phonenumbers.NumberFormat.prototype.getFormat = function() {
  * Gets the value of the format field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getFormatOrDefault = function() {
+i18n_phonenumbers.NumberFormat.prototype.getFormatOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(2));
 };
 
@@ -123,7 +123,7 @@ i18n.phonenumbers.NumberFormat.prototype.getFormatOrDefault = function() {
  * Sets the value of the format field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.setFormat = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.setFormat = function(value) {
   this.set$Value(2, value);
 };
 
@@ -131,7 +131,7 @@ i18n.phonenumbers.NumberFormat.prototype.setFormat = function(value) {
 /**
  * @return {boolean} Whether the format field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasFormat = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasFormat = function() {
   return this.has$Value(2);
 };
 
@@ -139,7 +139,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasFormat = function() {
 /**
  * @return {number} The number of values in the format field.
  */
-i18n.phonenumbers.NumberFormat.prototype.formatCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.formatCount = function() {
   return this.count$Values(2);
 };
 
@@ -147,7 +147,7 @@ i18n.phonenumbers.NumberFormat.prototype.formatCount = function() {
 /**
  * Clears the values in the format field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearFormat = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearFormat = function() {
   this.clear$Field(2);
 };
 
@@ -157,7 +157,7 @@ i18n.phonenumbers.NumberFormat.prototype.clearFormat = function() {
  * @param {number} index The index to lookup.
  * @return {?string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getLeadingDigitsPattern = function(index) {
+i18n_phonenumbers.NumberFormat.prototype.getLeadingDigitsPattern = function(index) {
   return /** @type {?string} */ (this.get$Value(3, index));
 };
 
@@ -167,7 +167,7 @@ i18n.phonenumbers.NumberFormat.prototype.getLeadingDigitsPattern = function(inde
  * @param {number} index The index to lookup.
  * @return {string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getLeadingDigitsPatternOrDefault = function(index) {
+i18n_phonenumbers.NumberFormat.prototype.getLeadingDigitsPatternOrDefault = function(index) {
   return /** @type {string} */ (this.get$ValueOrDefault(3, index));
 };
 
@@ -176,7 +176,7 @@ i18n.phonenumbers.NumberFormat.prototype.getLeadingDigitsPatternOrDefault = func
  * Adds a value to the leading_digits_pattern field.
  * @param {string} value The value to add.
  */
-i18n.phonenumbers.NumberFormat.prototype.addLeadingDigitsPattern = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.addLeadingDigitsPattern = function(value) {
   this.add$Value(3, value);
 };
 
@@ -185,7 +185,7 @@ i18n.phonenumbers.NumberFormat.prototype.addLeadingDigitsPattern = function(valu
  * Returns the array of values in the leading_digits_pattern field.
  * @return {!Array.<string>} The values in the field.
  */
-i18n.phonenumbers.NumberFormat.prototype.leadingDigitsPatternArray = function() {
+i18n_phonenumbers.NumberFormat.prototype.leadingDigitsPatternArray = function() {
   return /** @type {!Array.<string>} */ (this.array$Values(3));
 };
 
@@ -193,7 +193,7 @@ i18n.phonenumbers.NumberFormat.prototype.leadingDigitsPatternArray = function() 
 /**
  * @return {boolean} Whether the leading_digits_pattern field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasLeadingDigitsPattern = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasLeadingDigitsPattern = function() {
   return this.has$Value(3);
 };
 
@@ -201,7 +201,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasLeadingDigitsPattern = function() {
 /**
  * @return {number} The number of values in the leading_digits_pattern field.
  */
-i18n.phonenumbers.NumberFormat.prototype.leadingDigitsPatternCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.leadingDigitsPatternCount = function() {
   return this.count$Values(3);
 };
 
@@ -209,7 +209,7 @@ i18n.phonenumbers.NumberFormat.prototype.leadingDigitsPatternCount = function() 
 /**
  * Clears the values in the leading_digits_pattern field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearLeadingDigitsPattern = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearLeadingDigitsPattern = function() {
   this.clear$Field(3);
 };
 
@@ -218,7 +218,7 @@ i18n.phonenumbers.NumberFormat.prototype.clearLeadingDigitsPattern = function() 
  * Gets the value of the national_prefix_formatting_rule field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRule = function() {
   return /** @type {?string} */ (this.get$Value(4));
 };
 
@@ -227,7 +227,7 @@ i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRule = funct
  * Gets the value of the national_prefix_formatting_rule field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRuleOrDefault = function() {
+i18n_phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRuleOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(4));
 };
 
@@ -236,7 +236,7 @@ i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixFormattingRuleOrDefaul
  * Sets the value of the national_prefix_formatting_rule field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.setNationalPrefixFormattingRule = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.setNationalPrefixFormattingRule = function(value) {
   this.set$Value(4, value);
 };
 
@@ -244,7 +244,7 @@ i18n.phonenumbers.NumberFormat.prototype.setNationalPrefixFormattingRule = funct
 /**
  * @return {boolean} Whether the national_prefix_formatting_rule field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasNationalPrefixFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasNationalPrefixFormattingRule = function() {
   return this.has$Value(4);
 };
 
@@ -252,7 +252,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasNationalPrefixFormattingRule = funct
 /**
  * @return {number} The number of values in the national_prefix_formatting_rule field.
  */
-i18n.phonenumbers.NumberFormat.prototype.nationalPrefixFormattingRuleCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.nationalPrefixFormattingRuleCount = function() {
   return this.count$Values(4);
 };
 
@@ -260,7 +260,7 @@ i18n.phonenumbers.NumberFormat.prototype.nationalPrefixFormattingRuleCount = fun
 /**
  * Clears the values in the national_prefix_formatting_rule field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearNationalPrefixFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearNationalPrefixFormattingRule = function() {
   this.clear$Field(4);
 };
 
@@ -269,7 +269,7 @@ i18n.phonenumbers.NumberFormat.prototype.clearNationalPrefixFormattingRule = fun
  * Gets the value of the national_prefix_optional_when_formatting field.
  * @return {?boolean} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormatting = function() {
+i18n_phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormatting = function() {
   return /** @type {?boolean} */ (this.get$Value(6));
 };
 
@@ -278,7 +278,7 @@ i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormatting
  * Gets the value of the national_prefix_optional_when_formatting field or the default value if not set.
  * @return {boolean} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormattingOrDefault = function() {
+i18n_phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormattingOrDefault = function() {
   return /** @type {boolean} */ (this.get$ValueOrDefault(6));
 };
 
@@ -287,7 +287,7 @@ i18n.phonenumbers.NumberFormat.prototype.getNationalPrefixOptionalWhenFormatting
  * Sets the value of the national_prefix_optional_when_formatting field.
  * @param {boolean} value The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.setNationalPrefixOptionalWhenFormatting = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.setNationalPrefixOptionalWhenFormatting = function(value) {
   this.set$Value(6, value);
 };
 
@@ -295,7 +295,7 @@ i18n.phonenumbers.NumberFormat.prototype.setNationalPrefixOptionalWhenFormatting
 /**
  * @return {boolean} Whether the national_prefix_optional_when_formatting field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasNationalPrefixOptionalWhenFormatting = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasNationalPrefixOptionalWhenFormatting = function() {
   return this.has$Value(6);
 };
 
@@ -303,7 +303,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasNationalPrefixOptionalWhenFormatting
 /**
  * @return {number} The number of values in the national_prefix_optional_when_formatting field.
  */
-i18n.phonenumbers.NumberFormat.prototype.nationalPrefixOptionalWhenFormattingCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.nationalPrefixOptionalWhenFormattingCount = function() {
   return this.count$Values(6);
 };
 
@@ -311,7 +311,7 @@ i18n.phonenumbers.NumberFormat.prototype.nationalPrefixOptionalWhenFormattingCou
 /**
  * Clears the values in the national_prefix_optional_when_formatting field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearNationalPrefixOptionalWhenFormatting = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearNationalPrefixOptionalWhenFormatting = function() {
   this.clear$Field(6);
 };
 
@@ -320,7 +320,7 @@ i18n.phonenumbers.NumberFormat.prototype.clearNationalPrefixOptionalWhenFormatti
  * Gets the value of the domestic_carrier_code_formatting_rule field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRule = function() {
   return /** @type {?string} */ (this.get$Value(5));
 };
 
@@ -329,7 +329,7 @@ i18n.phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRule = 
  * Gets the value of the domestic_carrier_code_formatting_rule field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRuleOrDefault = function() {
+i18n_phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRuleOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(5));
 };
 
@@ -338,7 +338,7 @@ i18n.phonenumbers.NumberFormat.prototype.getDomesticCarrierCodeFormattingRuleOrD
  * Sets the value of the domestic_carrier_code_formatting_rule field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.NumberFormat.prototype.setDomesticCarrierCodeFormattingRule = function(value) {
+i18n_phonenumbers.NumberFormat.prototype.setDomesticCarrierCodeFormattingRule = function(value) {
   this.set$Value(5, value);
 };
 
@@ -346,7 +346,7 @@ i18n.phonenumbers.NumberFormat.prototype.setDomesticCarrierCodeFormattingRule = 
 /**
  * @return {boolean} Whether the domestic_carrier_code_formatting_rule field has a value.
  */
-i18n.phonenumbers.NumberFormat.prototype.hasDomesticCarrierCodeFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.hasDomesticCarrierCodeFormattingRule = function() {
   return this.has$Value(5);
 };
 
@@ -354,7 +354,7 @@ i18n.phonenumbers.NumberFormat.prototype.hasDomesticCarrierCodeFormattingRule = 
 /**
  * @return {number} The number of values in the domestic_carrier_code_formatting_rule field.
  */
-i18n.phonenumbers.NumberFormat.prototype.domesticCarrierCodeFormattingRuleCount = function() {
+i18n_phonenumbers.NumberFormat.prototype.domesticCarrierCodeFormattingRuleCount = function() {
   return this.count$Values(5);
 };
 
@@ -362,7 +362,7 @@ i18n.phonenumbers.NumberFormat.prototype.domesticCarrierCodeFormattingRuleCount 
 /**
  * Clears the values in the domestic_carrier_code_formatting_rule field.
  */
-i18n.phonenumbers.NumberFormat.prototype.clearDomesticCarrierCodeFormattingRule = function() {
+i18n_phonenumbers.NumberFormat.prototype.clearDomesticCarrierCodeFormattingRule = function() {
   this.clear$Field(5);
 };
 
@@ -373,25 +373,25 @@ i18n.phonenumbers.NumberFormat.prototype.clearDomesticCarrierCodeFormattingRule 
  * @constructor
  * @extends {goog.proto2.Message}
  */
-i18n.phonenumbers.PhoneNumberDesc = function() {
+i18n_phonenumbers.PhoneNumberDesc = function() {
   goog.proto2.Message.call(this);
 };
-goog.inherits(i18n.phonenumbers.PhoneNumberDesc, goog.proto2.Message);
+goog.inherits(i18n_phonenumbers.PhoneNumberDesc, goog.proto2.Message);
 
 
 /**
  * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The cloned message.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The cloned message.
  * @override
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clone;
+i18n_phonenumbers.PhoneNumberDesc.prototype.clone;
 
 
 /**
  * Gets the value of the national_number_pattern field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPattern = function() {
   return /** @type {?string} */ (this.get$Value(2));
 };
 
@@ -400,7 +400,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPattern = function(
  * Gets the value of the national_number_pattern field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPatternOrDefault = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPatternOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(2));
 };
 
@@ -409,7 +409,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberPatternOrDefault = 
  * Sets the value of the national_number_pattern field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.setNationalNumberPattern = function(value) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.setNationalNumberPattern = function(value) {
   this.set$Value(2, value);
 };
 
@@ -417,7 +417,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.setNationalNumberPattern = function(
 /**
  * @return {boolean} Whether the national_number_pattern field has a value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberPattern = function() {
   return this.has$Value(2);
 };
 
@@ -425,7 +425,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberPattern = function(
 /**
  * @return {number} The number of values in the national_number_pattern field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.nationalNumberPatternCount = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.nationalNumberPatternCount = function() {
   return this.count$Values(2);
 };
 
@@ -433,7 +433,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.nationalNumberPatternCount = functio
 /**
  * Clears the values in the national_number_pattern field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberPattern = function() {
   this.clear$Field(2);
 };
 
@@ -442,7 +442,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberPattern = functio
  * Gets the value of the possible_number_pattern field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPattern = function() {
   return /** @type {?string} */ (this.get$Value(3));
 };
 
@@ -451,7 +451,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPattern = function(
  * Gets the value of the possible_number_pattern field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPatternOrDefault = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPatternOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(3));
 };
 
@@ -460,7 +460,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberPatternOrDefault = 
  * Sets the value of the possible_number_pattern field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberPattern = function(value) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberPattern = function(value) {
   this.set$Value(3, value);
 };
 
@@ -468,7 +468,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberPattern = function(
 /**
  * @return {boolean} Whether the possible_number_pattern field has a value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberPattern = function() {
   return this.has$Value(3);
 };
 
@@ -476,7 +476,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberPattern = function(
 /**
  * @return {number} The number of values in the possible_number_pattern field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.possibleNumberPatternCount = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.possibleNumberPatternCount = function() {
   return this.count$Values(3);
 };
 
@@ -484,7 +484,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.possibleNumberPatternCount = functio
 /**
  * Clears the values in the possible_number_pattern field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberPattern = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberPattern = function() {
   this.clear$Field(3);
 };
 
@@ -493,7 +493,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberPattern = functio
  * Gets the value of the example_number field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getExampleNumber = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getExampleNumber = function() {
   return /** @type {?string} */ (this.get$Value(6));
 };
 
@@ -502,7 +502,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getExampleNumber = function() {
  * Gets the value of the example_number field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getExampleNumberOrDefault = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getExampleNumberOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(6));
 };
 
@@ -511,7 +511,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getExampleNumberOrDefault = function
  * Sets the value of the example_number field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.setExampleNumber = function(value) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.setExampleNumber = function(value) {
   this.set$Value(6, value);
 };
 
@@ -519,7 +519,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.setExampleNumber = function(value) {
 /**
  * @return {boolean} Whether the example_number field has a value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.hasExampleNumber = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.hasExampleNumber = function() {
   return this.has$Value(6);
 };
 
@@ -527,7 +527,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.hasExampleNumber = function() {
 /**
  * @return {number} The number of values in the example_number field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.exampleNumberCount = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.exampleNumberCount = function() {
   return this.count$Values(6);
 };
 
@@ -535,7 +535,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.exampleNumberCount = function() {
 /**
  * Clears the values in the example_number field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clearExampleNumber = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.clearExampleNumber = function() {
   this.clear$Field(6);
 };
 
@@ -544,7 +544,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.clearExampleNumber = function() {
  * Gets the value of the national_number_matcher_data field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherData = function() {
   return /** @type {?string} */ (this.get$Value(7));
 };
 
@@ -553,7 +553,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherData = funct
  * Gets the value of the national_number_matcher_data field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherDataOrDefault = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherDataOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(7));
 };
 
@@ -562,7 +562,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getNationalNumberMatcherDataOrDefaul
  * Sets the value of the national_number_matcher_data field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.setNationalNumberMatcherData = function(value) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.setNationalNumberMatcherData = function(value) {
   this.set$Value(7, value);
 };
 
@@ -570,7 +570,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.setNationalNumberMatcherData = funct
 /**
  * @return {boolean} Whether the national_number_matcher_data field has a value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberMatcherData = function() {
   return this.has$Value(7);
 };
 
@@ -578,7 +578,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.hasNationalNumberMatcherData = funct
 /**
  * @return {number} The number of values in the national_number_matcher_data field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.nationalNumberMatcherDataCount = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.nationalNumberMatcherDataCount = function() {
   return this.count$Values(7);
 };
 
@@ -586,7 +586,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.nationalNumberMatcherDataCount = fun
 /**
  * Clears the values in the national_number_matcher_data field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberMatcherData = function() {
   this.clear$Field(7);
 };
 
@@ -595,7 +595,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.clearNationalNumberMatcherData = fun
  * Gets the value of the possible_number_matcher_data field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherData = function() {
   return /** @type {?string} */ (this.get$Value(8));
 };
 
@@ -604,7 +604,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherData = funct
  * Gets the value of the possible_number_matcher_data field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherDataOrDefault = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherDataOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(8));
 };
 
@@ -613,7 +613,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getPossibleNumberMatcherDataOrDefaul
  * Sets the value of the possible_number_matcher_data field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberMatcherData = function(value) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberMatcherData = function(value) {
   this.set$Value(8, value);
 };
 
@@ -621,7 +621,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.setPossibleNumberMatcherData = funct
 /**
  * @return {boolean} Whether the possible_number_matcher_data field has a value.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberMatcherData = function() {
   return this.has$Value(8);
 };
 
@@ -629,7 +629,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.hasPossibleNumberMatcherData = funct
 /**
  * @return {number} The number of values in the possible_number_matcher_data field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.possibleNumberMatcherDataCount = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.possibleNumberMatcherDataCount = function() {
   return this.count$Values(8);
 };
 
@@ -637,7 +637,7 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.possibleNumberMatcherDataCount = fun
 /**
  * Clears the values in the possible_number_matcher_data field.
  */
-i18n.phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberMatcherData = function() {
+i18n_phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberMatcherData = function() {
   this.clear$Field(8);
 };
 
@@ -648,43 +648,43 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.clearPossibleNumberMatcherData = fun
  * @constructor
  * @extends {goog.proto2.Message}
  */
-i18n.phonenumbers.PhoneMetadata = function() {
+i18n_phonenumbers.PhoneMetadata = function() {
   goog.proto2.Message.call(this);
 };
-goog.inherits(i18n.phonenumbers.PhoneMetadata, goog.proto2.Message);
+goog.inherits(i18n_phonenumbers.PhoneMetadata, goog.proto2.Message);
 
 
 /**
  * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
- * @return {!i18n.phonenumbers.PhoneMetadata} The cloned message.
+ * @return {!i18n_phonenumbers.PhoneMetadata} The cloned message.
  * @override
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clone;
+i18n_phonenumbers.PhoneMetadata.prototype.clone;
 
 
 /**
  * Gets the value of the general_desc field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getGeneralDesc = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(1));
+i18n_phonenumbers.PhoneMetadata.prototype.getGeneralDesc = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(1));
 };
 
 
 /**
  * Gets the value of the general_desc field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getGeneralDescOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(1));
+i18n_phonenumbers.PhoneMetadata.prototype.getGeneralDescOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(1));
 };
 
 
 /**
  * Sets the value of the general_desc field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setGeneralDesc = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setGeneralDesc = function(value) {
   this.set$Value(1, value);
 };
 
@@ -692,7 +692,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setGeneralDesc = function(value) {
 /**
  * @return {boolean} Whether the general_desc field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasGeneralDesc = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasGeneralDesc = function() {
   return this.has$Value(1);
 };
 
@@ -700,7 +700,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasGeneralDesc = function() {
 /**
  * @return {number} The number of values in the general_desc field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.generalDescCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.generalDescCount = function() {
   return this.count$Values(1);
 };
 
@@ -708,34 +708,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.generalDescCount = function() {
 /**
  * Clears the values in the general_desc field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearGeneralDesc = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearGeneralDesc = function() {
   this.clear$Field(1);
 };
 
 
 /**
  * Gets the value of the fixed_line field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getFixedLine = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(2));
+i18n_phonenumbers.PhoneMetadata.prototype.getFixedLine = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(2));
 };
 
 
 /**
  * Gets the value of the fixed_line field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getFixedLineOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(2));
+i18n_phonenumbers.PhoneMetadata.prototype.getFixedLineOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(2));
 };
 
 
 /**
  * Sets the value of the fixed_line field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setFixedLine = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setFixedLine = function(value) {
   this.set$Value(2, value);
 };
 
@@ -743,7 +743,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setFixedLine = function(value) {
 /**
  * @return {boolean} Whether the fixed_line field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasFixedLine = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasFixedLine = function() {
   return this.has$Value(2);
 };
 
@@ -751,7 +751,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasFixedLine = function() {
 /**
  * @return {number} The number of values in the fixed_line field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.fixedLineCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.fixedLineCount = function() {
   return this.count$Values(2);
 };
 
@@ -759,34 +759,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.fixedLineCount = function() {
 /**
  * Clears the values in the fixed_line field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearFixedLine = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearFixedLine = function() {
   this.clear$Field(2);
 };
 
 
 /**
  * Gets the value of the mobile field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getMobile = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(3));
+i18n_phonenumbers.PhoneMetadata.prototype.getMobile = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(3));
 };
 
 
 /**
  * Gets the value of the mobile field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getMobileOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(3));
+i18n_phonenumbers.PhoneMetadata.prototype.getMobileOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(3));
 };
 
 
 /**
  * Sets the value of the mobile field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setMobile = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setMobile = function(value) {
   this.set$Value(3, value);
 };
 
@@ -794,7 +794,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setMobile = function(value) {
 /**
  * @return {boolean} Whether the mobile field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasMobile = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasMobile = function() {
   return this.has$Value(3);
 };
 
@@ -802,7 +802,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasMobile = function() {
 /**
  * @return {number} The number of values in the mobile field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.mobileCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.mobileCount = function() {
   return this.count$Values(3);
 };
 
@@ -810,34 +810,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.mobileCount = function() {
 /**
  * Clears the values in the mobile field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearMobile = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearMobile = function() {
   this.clear$Field(3);
 };
 
 
 /**
  * Gets the value of the toll_free field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getTollFree = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(4));
+i18n_phonenumbers.PhoneMetadata.prototype.getTollFree = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(4));
 };
 
 
 /**
  * Gets the value of the toll_free field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getTollFreeOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(4));
+i18n_phonenumbers.PhoneMetadata.prototype.getTollFreeOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(4));
 };
 
 
 /**
  * Sets the value of the toll_free field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setTollFree = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setTollFree = function(value) {
   this.set$Value(4, value);
 };
 
@@ -845,7 +845,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setTollFree = function(value) {
 /**
  * @return {boolean} Whether the toll_free field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasTollFree = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasTollFree = function() {
   return this.has$Value(4);
 };
 
@@ -853,7 +853,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasTollFree = function() {
 /**
  * @return {number} The number of values in the toll_free field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.tollFreeCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.tollFreeCount = function() {
   return this.count$Values(4);
 };
 
@@ -861,34 +861,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.tollFreeCount = function() {
 /**
  * Clears the values in the toll_free field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearTollFree = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearTollFree = function() {
   this.clear$Field(4);
 };
 
 
 /**
  * Gets the value of the premium_rate field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPremiumRate = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(5));
+i18n_phonenumbers.PhoneMetadata.prototype.getPremiumRate = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(5));
 };
 
 
 /**
  * Gets the value of the premium_rate field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPremiumRateOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(5));
+i18n_phonenumbers.PhoneMetadata.prototype.getPremiumRateOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(5));
 };
 
 
 /**
  * Sets the value of the premium_rate field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setPremiumRate = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setPremiumRate = function(value) {
   this.set$Value(5, value);
 };
 
@@ -896,7 +896,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setPremiumRate = function(value) {
 /**
  * @return {boolean} Whether the premium_rate field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasPremiumRate = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasPremiumRate = function() {
   return this.has$Value(5);
 };
 
@@ -904,7 +904,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasPremiumRate = function() {
 /**
  * @return {number} The number of values in the premium_rate field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.premiumRateCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.premiumRateCount = function() {
   return this.count$Values(5);
 };
 
@@ -912,34 +912,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.premiumRateCount = function() {
 /**
  * Clears the values in the premium_rate field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearPremiumRate = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearPremiumRate = function() {
   this.clear$Field(5);
 };
 
 
 /**
  * Gets the value of the shared_cost field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getSharedCost = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(6));
+i18n_phonenumbers.PhoneMetadata.prototype.getSharedCost = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(6));
 };
 
 
 /**
  * Gets the value of the shared_cost field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getSharedCostOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(6));
+i18n_phonenumbers.PhoneMetadata.prototype.getSharedCostOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(6));
 };
 
 
 /**
  * Sets the value of the shared_cost field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setSharedCost = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setSharedCost = function(value) {
   this.set$Value(6, value);
 };
 
@@ -947,7 +947,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setSharedCost = function(value) {
 /**
  * @return {boolean} Whether the shared_cost field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasSharedCost = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasSharedCost = function() {
   return this.has$Value(6);
 };
 
@@ -955,7 +955,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasSharedCost = function() {
 /**
  * @return {number} The number of values in the shared_cost field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.sharedCostCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.sharedCostCount = function() {
   return this.count$Values(6);
 };
 
@@ -963,34 +963,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.sharedCostCount = function() {
 /**
  * Clears the values in the shared_cost field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearSharedCost = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearSharedCost = function() {
   this.clear$Field(6);
 };
 
 
 /**
  * Gets the value of the personal_number field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPersonalNumber = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(7));
+i18n_phonenumbers.PhoneMetadata.prototype.getPersonalNumber = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(7));
 };
 
 
 /**
  * Gets the value of the personal_number field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPersonalNumberOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(7));
+i18n_phonenumbers.PhoneMetadata.prototype.getPersonalNumberOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(7));
 };
 
 
 /**
  * Sets the value of the personal_number field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setPersonalNumber = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setPersonalNumber = function(value) {
   this.set$Value(7, value);
 };
 
@@ -998,7 +998,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setPersonalNumber = function(value) {
 /**
  * @return {boolean} Whether the personal_number field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasPersonalNumber = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasPersonalNumber = function() {
   return this.has$Value(7);
 };
 
@@ -1006,7 +1006,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasPersonalNumber = function() {
 /**
  * @return {number} The number of values in the personal_number field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.personalNumberCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.personalNumberCount = function() {
   return this.count$Values(7);
 };
 
@@ -1014,34 +1014,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.personalNumberCount = function() {
 /**
  * Clears the values in the personal_number field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearPersonalNumber = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearPersonalNumber = function() {
   this.clear$Field(7);
 };
 
 
 /**
  * Gets the value of the voip field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getVoip = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(8));
+i18n_phonenumbers.PhoneMetadata.prototype.getVoip = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(8));
 };
 
 
 /**
  * Gets the value of the voip field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getVoipOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(8));
+i18n_phonenumbers.PhoneMetadata.prototype.getVoipOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(8));
 };
 
 
 /**
  * Sets the value of the voip field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setVoip = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setVoip = function(value) {
   this.set$Value(8, value);
 };
 
@@ -1049,7 +1049,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setVoip = function(value) {
 /**
  * @return {boolean} Whether the voip field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasVoip = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasVoip = function() {
   return this.has$Value(8);
 };
 
@@ -1057,7 +1057,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasVoip = function() {
 /**
  * @return {number} The number of values in the voip field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.voipCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.voipCount = function() {
   return this.count$Values(8);
 };
 
@@ -1065,34 +1065,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.voipCount = function() {
 /**
  * Clears the values in the voip field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearVoip = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearVoip = function() {
   this.clear$Field(8);
 };
 
 
 /**
  * Gets the value of the pager field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPager = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(21));
+i18n_phonenumbers.PhoneMetadata.prototype.getPager = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(21));
 };
 
 
 /**
  * Gets the value of the pager field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPagerOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(21));
+i18n_phonenumbers.PhoneMetadata.prototype.getPagerOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(21));
 };
 
 
 /**
  * Sets the value of the pager field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setPager = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setPager = function(value) {
   this.set$Value(21, value);
 };
 
@@ -1100,7 +1100,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setPager = function(value) {
 /**
  * @return {boolean} Whether the pager field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasPager = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasPager = function() {
   return this.has$Value(21);
 };
 
@@ -1108,7 +1108,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasPager = function() {
 /**
  * @return {number} The number of values in the pager field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.pagerCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.pagerCount = function() {
   return this.count$Values(21);
 };
 
@@ -1116,34 +1116,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.pagerCount = function() {
 /**
  * Clears the values in the pager field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearPager = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearPager = function() {
   this.clear$Field(21);
 };
 
 
 /**
  * Gets the value of the uan field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getUan = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(25));
+i18n_phonenumbers.PhoneMetadata.prototype.getUan = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(25));
 };
 
 
 /**
  * Gets the value of the uan field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getUanOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(25));
+i18n_phonenumbers.PhoneMetadata.prototype.getUanOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(25));
 };
 
 
 /**
  * Sets the value of the uan field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setUan = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setUan = function(value) {
   this.set$Value(25, value);
 };
 
@@ -1151,7 +1151,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setUan = function(value) {
 /**
  * @return {boolean} Whether the uan field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasUan = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasUan = function() {
   return this.has$Value(25);
 };
 
@@ -1159,7 +1159,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasUan = function() {
 /**
  * @return {number} The number of values in the uan field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.uanCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.uanCount = function() {
   return this.count$Values(25);
 };
 
@@ -1167,34 +1167,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.uanCount = function() {
 /**
  * Clears the values in the uan field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearUan = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearUan = function() {
   this.clear$Field(25);
 };
 
 
 /**
  * Gets the value of the emergency field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getEmergency = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(27));
+i18n_phonenumbers.PhoneMetadata.prototype.getEmergency = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(27));
 };
 
 
 /**
  * Gets the value of the emergency field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getEmergencyOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(27));
+i18n_phonenumbers.PhoneMetadata.prototype.getEmergencyOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(27));
 };
 
 
 /**
  * Sets the value of the emergency field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setEmergency = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setEmergency = function(value) {
   this.set$Value(27, value);
 };
 
@@ -1202,7 +1202,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setEmergency = function(value) {
 /**
  * @return {boolean} Whether the emergency field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasEmergency = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasEmergency = function() {
   return this.has$Value(27);
 };
 
@@ -1210,7 +1210,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasEmergency = function() {
 /**
  * @return {number} The number of values in the emergency field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.emergencyCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.emergencyCount = function() {
   return this.count$Values(27);
 };
 
@@ -1218,34 +1218,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.emergencyCount = function() {
 /**
  * Clears the values in the emergency field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearEmergency = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearEmergency = function() {
   this.clear$Field(27);
 };
 
 
 /**
  * Gets the value of the voicemail field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getVoicemail = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(28));
+i18n_phonenumbers.PhoneMetadata.prototype.getVoicemail = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(28));
 };
 
 
 /**
  * Gets the value of the voicemail field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getVoicemailOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(28));
+i18n_phonenumbers.PhoneMetadata.prototype.getVoicemailOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(28));
 };
 
 
 /**
  * Sets the value of the voicemail field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setVoicemail = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setVoicemail = function(value) {
   this.set$Value(28, value);
 };
 
@@ -1253,7 +1253,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setVoicemail = function(value) {
 /**
  * @return {boolean} Whether the voicemail field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasVoicemail = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasVoicemail = function() {
   return this.has$Value(28);
 };
 
@@ -1261,7 +1261,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasVoicemail = function() {
 /**
  * @return {number} The number of values in the voicemail field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.voicemailCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.voicemailCount = function() {
   return this.count$Values(28);
 };
 
@@ -1269,34 +1269,34 @@ i18n.phonenumbers.PhoneMetadata.prototype.voicemailCount = function() {
 /**
  * Clears the values in the voicemail field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearVoicemail = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearVoicemail = function() {
   this.clear$Field(28);
 };
 
 
 /**
  * Gets the value of the no_international_dialling field.
- * @return {i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNoInternationalDialling = function() {
-  return /** @type {i18n.phonenumbers.PhoneNumberDesc} */ (this.get$Value(24));
+i18n_phonenumbers.PhoneMetadata.prototype.getNoInternationalDialling = function() {
+  return /** @type {i18n_phonenumbers.PhoneNumberDesc} */ (this.get$Value(24));
 };
 
 
 /**
  * Gets the value of the no_international_dialling field or the default value if not set.
- * @return {!i18n.phonenumbers.PhoneNumberDesc} The value.
+ * @return {!i18n_phonenumbers.PhoneNumberDesc} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNoInternationalDiallingOrDefault = function() {
-  return /** @type {!i18n.phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(24));
+i18n_phonenumbers.PhoneMetadata.prototype.getNoInternationalDiallingOrDefault = function() {
+  return /** @type {!i18n_phonenumbers.PhoneNumberDesc} */ (this.get$ValueOrDefault(24));
 };
 
 
 /**
  * Sets the value of the no_international_dialling field.
- * @param {!i18n.phonenumbers.PhoneNumberDesc} value The value.
+ * @param {!i18n_phonenumbers.PhoneNumberDesc} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setNoInternationalDialling = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setNoInternationalDialling = function(value) {
   this.set$Value(24, value);
 };
 
@@ -1304,7 +1304,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setNoInternationalDialling = function(
 /**
  * @return {boolean} Whether the no_international_dialling field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasNoInternationalDialling = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasNoInternationalDialling = function() {
   return this.has$Value(24);
 };
 
@@ -1312,7 +1312,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasNoInternationalDialling = function(
 /**
  * @return {number} The number of values in the no_international_dialling field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.noInternationalDiallingCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.noInternationalDiallingCount = function() {
   return this.count$Values(24);
 };
 
@@ -1320,7 +1320,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.noInternationalDiallingCount = functio
 /**
  * Clears the values in the no_international_dialling field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearNoInternationalDialling = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearNoInternationalDialling = function() {
   this.clear$Field(24);
 };
 
@@ -1329,7 +1329,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearNoInternationalDialling = functio
  * Gets the value of the id field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getId = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getId = function() {
   return /** @type {?string} */ (this.get$Value(9));
 };
 
@@ -1338,7 +1338,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getId = function() {
  * Gets the value of the id field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getIdOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getIdOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(9));
 };
 
@@ -1347,7 +1347,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getIdOrDefault = function() {
  * Sets the value of the id field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setId = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setId = function(value) {
   this.set$Value(9, value);
 };
 
@@ -1355,7 +1355,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setId = function(value) {
 /**
  * @return {boolean} Whether the id field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasId = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasId = function() {
   return this.has$Value(9);
 };
 
@@ -1363,7 +1363,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasId = function() {
 /**
  * @return {number} The number of values in the id field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.idCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.idCount = function() {
   return this.count$Values(9);
 };
 
@@ -1371,7 +1371,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.idCount = function() {
 /**
  * Clears the values in the id field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearId = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearId = function() {
   this.clear$Field(9);
 };
 
@@ -1380,7 +1380,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearId = function() {
  * Gets the value of the country_code field.
  * @return {?number} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getCountryCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getCountryCode = function() {
   return /** @type {?number} */ (this.get$Value(10));
 };
 
@@ -1389,7 +1389,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getCountryCode = function() {
  * Gets the value of the country_code field or the default value if not set.
  * @return {number} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getCountryCodeOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getCountryCodeOrDefault = function() {
   return /** @type {number} */ (this.get$ValueOrDefault(10));
 };
 
@@ -1398,7 +1398,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getCountryCodeOrDefault = function() {
  * Sets the value of the country_code field.
  * @param {number} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setCountryCode = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setCountryCode = function(value) {
   this.set$Value(10, value);
 };
 
@@ -1406,7 +1406,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setCountryCode = function(value) {
 /**
  * @return {boolean} Whether the country_code field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasCountryCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasCountryCode = function() {
   return this.has$Value(10);
 };
 
@@ -1414,7 +1414,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasCountryCode = function() {
 /**
  * @return {number} The number of values in the country_code field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.countryCodeCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.countryCodeCount = function() {
   return this.count$Values(10);
 };
 
@@ -1422,7 +1422,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.countryCodeCount = function() {
 /**
  * Clears the values in the country_code field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearCountryCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearCountryCode = function() {
   this.clear$Field(10);
 };
 
@@ -1431,7 +1431,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearCountryCode = function() {
  * Gets the value of the international_prefix field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getInternationalPrefix = function() {
   return /** @type {?string} */ (this.get$Value(11));
 };
 
@@ -1440,7 +1440,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getInternationalPrefix = function() {
  * Gets the value of the international_prefix field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getInternationalPrefixOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getInternationalPrefixOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(11));
 };
 
@@ -1449,7 +1449,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getInternationalPrefixOrDefault = func
  * Sets the value of the international_prefix field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setInternationalPrefix = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setInternationalPrefix = function(value) {
   this.set$Value(11, value);
 };
 
@@ -1457,7 +1457,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setInternationalPrefix = function(valu
 /**
  * @return {boolean} Whether the international_prefix field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasInternationalPrefix = function() {
   return this.has$Value(11);
 };
 
@@ -1465,7 +1465,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasInternationalPrefix = function() {
 /**
  * @return {number} The number of values in the international_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.internationalPrefixCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.internationalPrefixCount = function() {
   return this.count$Values(11);
 };
 
@@ -1473,7 +1473,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.internationalPrefixCount = function() 
 /**
  * Clears the values in the international_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearInternationalPrefix = function() {
   this.clear$Field(11);
 };
 
@@ -1482,7 +1482,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearInternationalPrefix = function() 
  * Gets the value of the preferred_international_prefix field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefix = function() {
   return /** @type {?string} */ (this.get$Value(17));
 };
 
@@ -1491,7 +1491,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefix = func
  * Gets the value of the preferred_international_prefix field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefixOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefixOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(17));
 };
 
@@ -1500,7 +1500,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getPreferredInternationalPrefixOrDefau
  * Sets the value of the preferred_international_prefix field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setPreferredInternationalPrefix = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setPreferredInternationalPrefix = function(value) {
   this.set$Value(17, value);
 };
 
@@ -1508,7 +1508,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setPreferredInternationalPrefix = func
 /**
  * @return {boolean} Whether the preferred_international_prefix field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasPreferredInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasPreferredInternationalPrefix = function() {
   return this.has$Value(17);
 };
 
@@ -1516,7 +1516,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasPreferredInternationalPrefix = func
 /**
  * @return {number} The number of values in the preferred_international_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.preferredInternationalPrefixCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.preferredInternationalPrefixCount = function() {
   return this.count$Values(17);
 };
 
@@ -1524,7 +1524,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.preferredInternationalPrefixCount = fu
 /**
  * Clears the values in the preferred_international_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearPreferredInternationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearPreferredInternationalPrefix = function() {
   this.clear$Field(17);
 };
 
@@ -1533,7 +1533,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearPreferredInternationalPrefix = fu
  * Gets the value of the national_prefix field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefix = function() {
   return /** @type {?string} */ (this.get$Value(12));
 };
 
@@ -1542,7 +1542,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefix = function() {
  * Gets the value of the national_prefix field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefixOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(12));
 };
 
@@ -1551,7 +1551,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixOrDefault = function(
  * Sets the value of the national_prefix field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefix = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setNationalPrefix = function(value) {
   this.set$Value(12, value);
 };
 
@@ -1559,7 +1559,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefix = function(value) {
 /**
  * @return {boolean} Whether the national_prefix field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasNationalPrefix = function() {
   return this.has$Value(12);
 };
 
@@ -1567,7 +1567,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefix = function() {
 /**
  * @return {number} The number of values in the national_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.nationalPrefixCount = function() {
   return this.count$Values(12);
 };
 
@@ -1575,7 +1575,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixCount = function() {
 /**
  * Clears the values in the national_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearNationalPrefix = function() {
   this.clear$Field(12);
 };
 
@@ -1584,7 +1584,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefix = function() {
  * Gets the value of the preferred_extn_prefix field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefix = function() {
   return /** @type {?string} */ (this.get$Value(13));
 };
 
@@ -1593,7 +1593,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefix = function() {
  * Gets the value of the preferred_extn_prefix field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefixOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefixOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(13));
 };
 
@@ -1602,7 +1602,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getPreferredExtnPrefixOrDefault = func
  * Sets the value of the preferred_extn_prefix field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setPreferredExtnPrefix = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setPreferredExtnPrefix = function(value) {
   this.set$Value(13, value);
 };
 
@@ -1610,7 +1610,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setPreferredExtnPrefix = function(valu
 /**
  * @return {boolean} Whether the preferred_extn_prefix field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasPreferredExtnPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasPreferredExtnPrefix = function() {
   return this.has$Value(13);
 };
 
@@ -1618,7 +1618,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasPreferredExtnPrefix = function() {
 /**
  * @return {number} The number of values in the preferred_extn_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.preferredExtnPrefixCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.preferredExtnPrefixCount = function() {
   return this.count$Values(13);
 };
 
@@ -1626,7 +1626,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.preferredExtnPrefixCount = function() 
 /**
  * Clears the values in the preferred_extn_prefix field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearPreferredExtnPrefix = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearPreferredExtnPrefix = function() {
   this.clear$Field(13);
 };
 
@@ -1635,7 +1635,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearPreferredExtnPrefix = function() 
  * Gets the value of the national_prefix_for_parsing field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsing = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsing = function() {
   return /** @type {?string} */ (this.get$Value(15));
 };
 
@@ -1644,7 +1644,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsing = function
  * Gets the value of the national_prefix_for_parsing field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsingOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsingOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(15));
 };
 
@@ -1653,7 +1653,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixForParsingOrDefault =
  * Sets the value of the national_prefix_for_parsing field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefixForParsing = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setNationalPrefixForParsing = function(value) {
   this.set$Value(15, value);
 };
 
@@ -1661,7 +1661,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefixForParsing = function
 /**
  * @return {boolean} Whether the national_prefix_for_parsing field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefixForParsing = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasNationalPrefixForParsing = function() {
   return this.has$Value(15);
 };
 
@@ -1669,7 +1669,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefixForParsing = function
 /**
  * @return {number} The number of values in the national_prefix_for_parsing field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixForParsingCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.nationalPrefixForParsingCount = function() {
   return this.count$Values(15);
 };
 
@@ -1677,7 +1677,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixForParsingCount = functi
 /**
  * Clears the values in the national_prefix_for_parsing field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefixForParsing = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearNationalPrefixForParsing = function() {
   this.clear$Field(15);
 };
 
@@ -1686,7 +1686,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefixForParsing = functi
  * Gets the value of the national_prefix_transform_rule field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRule = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRule = function() {
   return /** @type {?string} */ (this.get$Value(16));
 };
 
@@ -1695,7 +1695,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRule = funct
  * Gets the value of the national_prefix_transform_rule field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRuleOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRuleOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(16));
 };
 
@@ -1704,7 +1704,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getNationalPrefixTransformRuleOrDefaul
  * Sets the value of the national_prefix_transform_rule field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefixTransformRule = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setNationalPrefixTransformRule = function(value) {
   this.set$Value(16, value);
 };
 
@@ -1712,7 +1712,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setNationalPrefixTransformRule = funct
 /**
  * @return {boolean} Whether the national_prefix_transform_rule field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefixTransformRule = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasNationalPrefixTransformRule = function() {
   return this.has$Value(16);
 };
 
@@ -1720,7 +1720,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasNationalPrefixTransformRule = funct
 /**
  * @return {number} The number of values in the national_prefix_transform_rule field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixTransformRuleCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.nationalPrefixTransformRuleCount = function() {
   return this.count$Values(16);
 };
 
@@ -1728,7 +1728,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.nationalPrefixTransformRuleCount = fun
 /**
  * Clears the values in the national_prefix_transform_rule field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefixTransformRule = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearNationalPrefixTransformRule = function() {
   this.clear$Field(16);
 };
 
@@ -1737,7 +1737,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearNationalPrefixTransformRule = fun
  * Gets the value of the same_mobile_and_fixed_line_pattern field.
  * @return {?boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePattern = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePattern = function() {
   return /** @type {?boolean} */ (this.get$Value(18));
 };
 
@@ -1746,7 +1746,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePattern = fun
  * Gets the value of the same_mobile_and_fixed_line_pattern field or the default value if not set.
  * @return {boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePatternOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePatternOrDefault = function() {
   return /** @type {boolean} */ (this.get$ValueOrDefault(18));
 };
 
@@ -1755,7 +1755,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getSameMobileAndFixedLinePatternOrDefa
  * Sets the value of the same_mobile_and_fixed_line_pattern field.
  * @param {boolean} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setSameMobileAndFixedLinePattern = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setSameMobileAndFixedLinePattern = function(value) {
   this.set$Value(18, value);
 };
 
@@ -1763,7 +1763,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setSameMobileAndFixedLinePattern = fun
 /**
  * @return {boolean} Whether the same_mobile_and_fixed_line_pattern field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasSameMobileAndFixedLinePattern = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasSameMobileAndFixedLinePattern = function() {
   return this.has$Value(18);
 };
 
@@ -1771,7 +1771,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasSameMobileAndFixedLinePattern = fun
 /**
  * @return {number} The number of values in the same_mobile_and_fixed_line_pattern field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.sameMobileAndFixedLinePatternCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.sameMobileAndFixedLinePatternCount = function() {
   return this.count$Values(18);
 };
 
@@ -1779,7 +1779,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.sameMobileAndFixedLinePatternCount = f
 /**
  * Clears the values in the same_mobile_and_fixed_line_pattern field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearSameMobileAndFixedLinePattern = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearSameMobileAndFixedLinePattern = function() {
   this.clear$Field(18);
 };
 
@@ -1787,45 +1787,45 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearSameMobileAndFixedLinePattern = f
 /**
  * Gets the value of the number_format field at the index given.
  * @param {number} index The index to lookup.
- * @return {i18n.phonenumbers.NumberFormat} The value.
+ * @return {i18n_phonenumbers.NumberFormat} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNumberFormat = function(index) {
-  return /** @type {i18n.phonenumbers.NumberFormat} */ (this.get$Value(19, index));
+i18n_phonenumbers.PhoneMetadata.prototype.getNumberFormat = function(index) {
+  return /** @type {i18n_phonenumbers.NumberFormat} */ (this.get$Value(19, index));
 };
 
 
 /**
  * Gets the value of the number_format field at the index given or the default value if not set.
  * @param {number} index The index to lookup.
- * @return {!i18n.phonenumbers.NumberFormat} The value.
+ * @return {!i18n_phonenumbers.NumberFormat} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getNumberFormatOrDefault = function(index) {
-  return /** @type {!i18n.phonenumbers.NumberFormat} */ (this.get$ValueOrDefault(19, index));
+i18n_phonenumbers.PhoneMetadata.prototype.getNumberFormatOrDefault = function(index) {
+  return /** @type {!i18n_phonenumbers.NumberFormat} */ (this.get$ValueOrDefault(19, index));
 };
 
 
 /**
  * Adds a value to the number_format field.
- * @param {!i18n.phonenumbers.NumberFormat} value The value to add.
+ * @param {!i18n_phonenumbers.NumberFormat} value The value to add.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.addNumberFormat = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.addNumberFormat = function(value) {
   this.add$Value(19, value);
 };
 
 
 /**
  * Returns the array of values in the number_format field.
- * @return {!Array.<!i18n.phonenumbers.NumberFormat>} The values in the field.
+ * @return {!Array.<!i18n_phonenumbers.NumberFormat>} The values in the field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.numberFormatArray = function() {
-  return /** @type {!Array.<!i18n.phonenumbers.NumberFormat>} */ (this.array$Values(19));
+i18n_phonenumbers.PhoneMetadata.prototype.numberFormatArray = function() {
+  return /** @type {!Array.<!i18n_phonenumbers.NumberFormat>} */ (this.array$Values(19));
 };
 
 
 /**
  * @return {boolean} Whether the number_format field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasNumberFormat = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasNumberFormat = function() {
   return this.has$Value(19);
 };
 
@@ -1833,7 +1833,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasNumberFormat = function() {
 /**
  * @return {number} The number of values in the number_format field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.numberFormatCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.numberFormatCount = function() {
   return this.count$Values(19);
 };
 
@@ -1841,7 +1841,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.numberFormatCount = function() {
 /**
  * Clears the values in the number_format field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearNumberFormat = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearNumberFormat = function() {
   this.clear$Field(19);
 };
 
@@ -1849,45 +1849,45 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearNumberFormat = function() {
 /**
  * Gets the value of the intl_number_format field at the index given.
  * @param {number} index The index to lookup.
- * @return {i18n.phonenumbers.NumberFormat} The value.
+ * @return {i18n_phonenumbers.NumberFormat} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getIntlNumberFormat = function(index) {
-  return /** @type {i18n.phonenumbers.NumberFormat} */ (this.get$Value(20, index));
+i18n_phonenumbers.PhoneMetadata.prototype.getIntlNumberFormat = function(index) {
+  return /** @type {i18n_phonenumbers.NumberFormat} */ (this.get$Value(20, index));
 };
 
 
 /**
  * Gets the value of the intl_number_format field at the index given or the default value if not set.
  * @param {number} index The index to lookup.
- * @return {!i18n.phonenumbers.NumberFormat} The value.
+ * @return {!i18n_phonenumbers.NumberFormat} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getIntlNumberFormatOrDefault = function(index) {
-  return /** @type {!i18n.phonenumbers.NumberFormat} */ (this.get$ValueOrDefault(20, index));
+i18n_phonenumbers.PhoneMetadata.prototype.getIntlNumberFormatOrDefault = function(index) {
+  return /** @type {!i18n_phonenumbers.NumberFormat} */ (this.get$ValueOrDefault(20, index));
 };
 
 
 /**
  * Adds a value to the intl_number_format field.
- * @param {!i18n.phonenumbers.NumberFormat} value The value to add.
+ * @param {!i18n_phonenumbers.NumberFormat} value The value to add.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.addIntlNumberFormat = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.addIntlNumberFormat = function(value) {
   this.add$Value(20, value);
 };
 
 
 /**
  * Returns the array of values in the intl_number_format field.
- * @return {!Array.<!i18n.phonenumbers.NumberFormat>} The values in the field.
+ * @return {!Array.<!i18n_phonenumbers.NumberFormat>} The values in the field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.intlNumberFormatArray = function() {
-  return /** @type {!Array.<!i18n.phonenumbers.NumberFormat>} */ (this.array$Values(20));
+i18n_phonenumbers.PhoneMetadata.prototype.intlNumberFormatArray = function() {
+  return /** @type {!Array.<!i18n_phonenumbers.NumberFormat>} */ (this.array$Values(20));
 };
 
 
 /**
  * @return {boolean} Whether the intl_number_format field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasIntlNumberFormat = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasIntlNumberFormat = function() {
   return this.has$Value(20);
 };
 
@@ -1895,7 +1895,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasIntlNumberFormat = function() {
 /**
  * @return {number} The number of values in the intl_number_format field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.intlNumberFormatCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.intlNumberFormatCount = function() {
   return this.count$Values(20);
 };
 
@@ -1903,7 +1903,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.intlNumberFormatCount = function() {
 /**
  * Clears the values in the intl_number_format field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearIntlNumberFormat = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearIntlNumberFormat = function() {
   this.clear$Field(20);
 };
 
@@ -1912,7 +1912,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearIntlNumberFormat = function() {
  * Gets the value of the main_country_for_code field.
  * @return {?boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getMainCountryForCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getMainCountryForCode = function() {
   return /** @type {?boolean} */ (this.get$Value(22));
 };
 
@@ -1921,7 +1921,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getMainCountryForCode = function() {
  * Gets the value of the main_country_for_code field or the default value if not set.
  * @return {boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getMainCountryForCodeOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getMainCountryForCodeOrDefault = function() {
   return /** @type {boolean} */ (this.get$ValueOrDefault(22));
 };
 
@@ -1930,7 +1930,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getMainCountryForCodeOrDefault = funct
  * Sets the value of the main_country_for_code field.
  * @param {boolean} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setMainCountryForCode = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setMainCountryForCode = function(value) {
   this.set$Value(22, value);
 };
 
@@ -1938,7 +1938,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setMainCountryForCode = function(value
 /**
  * @return {boolean} Whether the main_country_for_code field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasMainCountryForCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasMainCountryForCode = function() {
   return this.has$Value(22);
 };
 
@@ -1946,7 +1946,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasMainCountryForCode = function() {
 /**
  * @return {number} The number of values in the main_country_for_code field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.mainCountryForCodeCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.mainCountryForCodeCount = function() {
   return this.count$Values(22);
 };
 
@@ -1954,7 +1954,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.mainCountryForCodeCount = function() {
 /**
  * Clears the values in the main_country_for_code field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearMainCountryForCode = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearMainCountryForCode = function() {
   this.clear$Field(22);
 };
 
@@ -1963,7 +1963,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearMainCountryForCode = function() {
  * Gets the value of the leading_digits field.
  * @return {?string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getLeadingDigits = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getLeadingDigits = function() {
   return /** @type {?string} */ (this.get$Value(23));
 };
 
@@ -1972,7 +1972,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getLeadingDigits = function() {
  * Gets the value of the leading_digits field or the default value if not set.
  * @return {string} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getLeadingDigitsOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getLeadingDigitsOrDefault = function() {
   return /** @type {string} */ (this.get$ValueOrDefault(23));
 };
 
@@ -1981,7 +1981,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getLeadingDigitsOrDefault = function()
  * Sets the value of the leading_digits field.
  * @param {string} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setLeadingDigits = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setLeadingDigits = function(value) {
   this.set$Value(23, value);
 };
 
@@ -1989,7 +1989,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setLeadingDigits = function(value) {
 /**
  * @return {boolean} Whether the leading_digits field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasLeadingDigits = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasLeadingDigits = function() {
   return this.has$Value(23);
 };
 
@@ -1997,7 +1997,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasLeadingDigits = function() {
 /**
  * @return {number} The number of values in the leading_digits field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.leadingDigitsCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.leadingDigitsCount = function() {
   return this.count$Values(23);
 };
 
@@ -2005,7 +2005,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.leadingDigitsCount = function() {
 /**
  * Clears the values in the leading_digits field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearLeadingDigits = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearLeadingDigits = function() {
   this.clear$Field(23);
 };
 
@@ -2014,7 +2014,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearLeadingDigits = function() {
  * Gets the value of the leading_zero_possible field.
  * @return {?boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossible = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossible = function() {
   return /** @type {?boolean} */ (this.get$Value(26));
 };
 
@@ -2023,7 +2023,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossible = function() {
  * Gets the value of the leading_zero_possible field or the default value if not set.
  * @return {boolean} The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossibleOrDefault = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossibleOrDefault = function() {
   return /** @type {boolean} */ (this.get$ValueOrDefault(26));
 };
 
@@ -2032,7 +2032,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.getLeadingZeroPossibleOrDefault = func
  * Sets the value of the leading_zero_possible field.
  * @param {boolean} value The value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.setLeadingZeroPossible = function(value) {
+i18n_phonenumbers.PhoneMetadata.prototype.setLeadingZeroPossible = function(value) {
   this.set$Value(26, value);
 };
 
@@ -2040,7 +2040,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.setLeadingZeroPossible = function(valu
 /**
  * @return {boolean} Whether the leading_zero_possible field has a value.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.hasLeadingZeroPossible = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.hasLeadingZeroPossible = function() {
   return this.has$Value(26);
 };
 
@@ -2048,7 +2048,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.hasLeadingZeroPossible = function() {
 /**
  * @return {number} The number of values in the leading_zero_possible field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.leadingZeroPossibleCount = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.leadingZeroPossibleCount = function() {
   return this.count$Values(26);
 };
 
@@ -2056,7 +2056,7 @@ i18n.phonenumbers.PhoneMetadata.prototype.leadingZeroPossibleCount = function() 
 /**
  * Clears the values in the leading_zero_possible field.
  */
-i18n.phonenumbers.PhoneMetadata.prototype.clearLeadingZeroPossible = function() {
+i18n_phonenumbers.PhoneMetadata.prototype.clearLeadingZeroPossible = function() {
   this.clear$Field(26);
 };
 
@@ -2066,62 +2066,62 @@ i18n.phonenumbers.PhoneMetadata.prototype.clearLeadingZeroPossible = function() 
  * @constructor
  * @extends {goog.proto2.Message}
  */
-i18n.phonenumbers.PhoneMetadataCollection = function() {
+i18n_phonenumbers.PhoneMetadataCollection = function() {
   goog.proto2.Message.call(this);
 };
-goog.inherits(i18n.phonenumbers.PhoneMetadataCollection, goog.proto2.Message);
+goog.inherits(i18n_phonenumbers.PhoneMetadataCollection, goog.proto2.Message);
 
 
 /**
  * Overrides {@link goog.proto2.Message#clone} to specify its exact return type.
- * @return {!i18n.phonenumbers.PhoneMetadataCollection} The cloned message.
+ * @return {!i18n_phonenumbers.PhoneMetadataCollection} The cloned message.
  * @override
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.clone;
+i18n_phonenumbers.PhoneMetadataCollection.prototype.clone;
 
 
 /**
  * Gets the value of the metadata field at the index given.
  * @param {number} index The index to lookup.
- * @return {i18n.phonenumbers.PhoneMetadata} The value.
+ * @return {i18n_phonenumbers.PhoneMetadata} The value.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.getMetadata = function(index) {
-  return /** @type {i18n.phonenumbers.PhoneMetadata} */ (this.get$Value(1, index));
+i18n_phonenumbers.PhoneMetadataCollection.prototype.getMetadata = function(index) {
+  return /** @type {i18n_phonenumbers.PhoneMetadata} */ (this.get$Value(1, index));
 };
 
 
 /**
  * Gets the value of the metadata field at the index given or the default value if not set.
  * @param {number} index The index to lookup.
- * @return {!i18n.phonenumbers.PhoneMetadata} The value.
+ * @return {!i18n_phonenumbers.PhoneMetadata} The value.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.getMetadataOrDefault = function(index) {
-  return /** @type {!i18n.phonenumbers.PhoneMetadata} */ (this.get$ValueOrDefault(1, index));
+i18n_phonenumbers.PhoneMetadataCollection.prototype.getMetadataOrDefault = function(index) {
+  return /** @type {!i18n_phonenumbers.PhoneMetadata} */ (this.get$ValueOrDefault(1, index));
 };
 
 
 /**
  * Adds a value to the metadata field.
- * @param {!i18n.phonenumbers.PhoneMetadata} value The value to add.
+ * @param {!i18n_phonenumbers.PhoneMetadata} value The value to add.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.addMetadata = function(value) {
+i18n_phonenumbers.PhoneMetadataCollection.prototype.addMetadata = function(value) {
   this.add$Value(1, value);
 };
 
 
 /**
  * Returns the array of values in the metadata field.
- * @return {!Array.<!i18n.phonenumbers.PhoneMetadata>} The values in the field.
+ * @return {!Array.<!i18n_phonenumbers.PhoneMetadata>} The values in the field.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.metadataArray = function() {
-  return /** @type {!Array.<!i18n.phonenumbers.PhoneMetadata>} */ (this.array$Values(1));
+i18n_phonenumbers.PhoneMetadataCollection.prototype.metadataArray = function() {
+  return /** @type {!Array.<!i18n_phonenumbers.PhoneMetadata>} */ (this.array$Values(1));
 };
 
 
 /**
  * @return {boolean} Whether the metadata field has a value.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.hasMetadata = function() {
+i18n_phonenumbers.PhoneMetadataCollection.prototype.hasMetadata = function() {
   return this.has$Value(1);
 };
 
@@ -2129,7 +2129,7 @@ i18n.phonenumbers.PhoneMetadataCollection.prototype.hasMetadata = function() {
 /**
  * @return {number} The number of values in the metadata field.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.metadataCount = function() {
+i18n_phonenumbers.PhoneMetadataCollection.prototype.metadataCount = function() {
   return this.count$Values(1);
 };
 
@@ -2137,19 +2137,19 @@ i18n.phonenumbers.PhoneMetadataCollection.prototype.metadataCount = function() {
 /**
  * Clears the values in the metadata field.
  */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.clearMetadata = function() {
+i18n_phonenumbers.PhoneMetadataCollection.prototype.clearMetadata = function() {
   this.clear$Field(1);
 };
 
 
 /** @override */
-i18n.phonenumbers.NumberFormat.prototype.getDescriptor = function() {
-  if (!i18n.phonenumbers.NumberFormat.descriptor_) {
+i18n_phonenumbers.NumberFormat.prototype.getDescriptor = function() {
+  if (!i18n_phonenumbers.NumberFormat.descriptor_) {
     // The descriptor is created lazily when we instantiate a new instance.
     var descriptorObj = {
       0: {
         name: 'NumberFormat',
-        fullName: 'i18n.phonenumbers.NumberFormat'
+        fullName: 'i18n_phonenumbers.NumberFormat'
       },
       1: {
         name: 'pattern',
@@ -2185,28 +2185,28 @@ i18n.phonenumbers.NumberFormat.prototype.getDescriptor = function() {
         type: String
       }
     };
-    i18n.phonenumbers.NumberFormat.descriptor_ =
+    i18n_phonenumbers.NumberFormat.descriptor_ =
         goog.proto2.Message.createDescriptor(
-             i18n.phonenumbers.NumberFormat, descriptorObj);
+             i18n_phonenumbers.NumberFormat, descriptorObj);
   }
-  return i18n.phonenumbers.NumberFormat.descriptor_;
+  return i18n_phonenumbers.NumberFormat.descriptor_;
 };
 
 
 // Export getDescriptor static function robust to minification.
-i18n.phonenumbers.NumberFormat['ctor'] = i18n.phonenumbers.NumberFormat;
-i18n.phonenumbers.NumberFormat['ctor'].getDescriptor =
-    i18n.phonenumbers.NumberFormat.prototype.getDescriptor;
+i18n_phonenumbers.NumberFormat['ctor'] = i18n_phonenumbers.NumberFormat;
+i18n_phonenumbers.NumberFormat['ctor'].getDescriptor =
+    i18n_phonenumbers.NumberFormat.prototype.getDescriptor;
 
 
 /** @override */
-i18n.phonenumbers.PhoneNumberDesc.prototype.getDescriptor = function() {
-  if (!i18n.phonenumbers.PhoneNumberDesc.descriptor_) {
+i18n_phonenumbers.PhoneNumberDesc.prototype.getDescriptor = function() {
+  if (!i18n_phonenumbers.PhoneNumberDesc.descriptor_) {
     // The descriptor is created lazily when we instantiate a new instance.
     var descriptorObj = {
       0: {
         name: 'PhoneNumberDesc',
-        fullName: 'i18n.phonenumbers.PhoneNumberDesc'
+        fullName: 'i18n_phonenumbers.PhoneNumberDesc'
       },
       2: {
         name: 'national_number_pattern',
@@ -2234,93 +2234,93 @@ i18n.phonenumbers.PhoneNumberDesc.prototype.getDescriptor = function() {
         type: String
       }
     };
-    i18n.phonenumbers.PhoneNumberDesc.descriptor_ =
+    i18n_phonenumbers.PhoneNumberDesc.descriptor_ =
         goog.proto2.Message.createDescriptor(
-             i18n.phonenumbers.PhoneNumberDesc, descriptorObj);
+             i18n_phonenumbers.PhoneNumberDesc, descriptorObj);
   }
-  return i18n.phonenumbers.PhoneNumberDesc.descriptor_;
+  return i18n_phonenumbers.PhoneNumberDesc.descriptor_;
 };
 
 
 // Export getDescriptor static function robust to minification.
-i18n.phonenumbers.PhoneNumberDesc['ctor'] = i18n.phonenumbers.PhoneNumberDesc;
-i18n.phonenumbers.PhoneNumberDesc['ctor'].getDescriptor =
-    i18n.phonenumbers.PhoneNumberDesc.prototype.getDescriptor;
+i18n_phonenumbers.PhoneNumberDesc['ctor'] = i18n_phonenumbers.PhoneNumberDesc;
+i18n_phonenumbers.PhoneNumberDesc['ctor'].getDescriptor =
+    i18n_phonenumbers.PhoneNumberDesc.prototype.getDescriptor;
 
 
 /** @override */
-i18n.phonenumbers.PhoneMetadata.prototype.getDescriptor = function() {
-  if (!i18n.phonenumbers.PhoneMetadata.descriptor_) {
+i18n_phonenumbers.PhoneMetadata.prototype.getDescriptor = function() {
+  if (!i18n_phonenumbers.PhoneMetadata.descriptor_) {
     // The descriptor is created lazily when we instantiate a new instance.
     var descriptorObj = {
       0: {
         name: 'PhoneMetadata',
-        fullName: 'i18n.phonenumbers.PhoneMetadata'
+        fullName: 'i18n_phonenumbers.PhoneMetadata'
       },
       1: {
         name: 'general_desc',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       2: {
         name: 'fixed_line',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       3: {
         name: 'mobile',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       4: {
         name: 'toll_free',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       5: {
         name: 'premium_rate',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       6: {
         name: 'shared_cost',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       7: {
         name: 'personal_number',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       8: {
         name: 'voip',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       21: {
         name: 'pager',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       25: {
         name: 'uan',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       27: {
         name: 'emergency',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       28: {
         name: 'voicemail',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       24: {
         name: 'no_international_dialling',
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneNumberDesc
+        type: i18n_phonenumbers.PhoneNumberDesc
       },
       9: {
         name: 'id',
@@ -2373,13 +2373,13 @@ i18n.phonenumbers.PhoneMetadata.prototype.getDescriptor = function() {
         name: 'number_format',
         repeated: true,
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.NumberFormat
+        type: i18n_phonenumbers.NumberFormat
       },
       20: {
         name: 'intl_number_format',
         repeated: true,
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.NumberFormat
+        type: i18n_phonenumbers.NumberFormat
       },
       22: {
         name: 'main_country_for_code',
@@ -2399,45 +2399,45 @@ i18n.phonenumbers.PhoneMetadata.prototype.getDescriptor = function() {
         type: Boolean
       }
     };
-    i18n.phonenumbers.PhoneMetadata.descriptor_ =
+    i18n_phonenumbers.PhoneMetadata.descriptor_ =
         goog.proto2.Message.createDescriptor(
-             i18n.phonenumbers.PhoneMetadata, descriptorObj);
+             i18n_phonenumbers.PhoneMetadata, descriptorObj);
   }
-  return i18n.phonenumbers.PhoneMetadata.descriptor_;
+  return i18n_phonenumbers.PhoneMetadata.descriptor_;
 };
 
 
 // Export getDescriptor static function robust to minification.
-i18n.phonenumbers.PhoneMetadata['ctor'] = i18n.phonenumbers.PhoneMetadata;
-i18n.phonenumbers.PhoneMetadata['ctor'].getDescriptor =
-    i18n.phonenumbers.PhoneMetadata.prototype.getDescriptor;
+i18n_phonenumbers.PhoneMetadata['ctor'] = i18n_phonenumbers.PhoneMetadata;
+i18n_phonenumbers.PhoneMetadata['ctor'].getDescriptor =
+    i18n_phonenumbers.PhoneMetadata.prototype.getDescriptor;
 
 
 /** @override */
-i18n.phonenumbers.PhoneMetadataCollection.prototype.getDescriptor = function() {
-  if (!i18n.phonenumbers.PhoneMetadataCollection.descriptor_) {
+i18n_phonenumbers.PhoneMetadataCollection.prototype.getDescriptor = function() {
+  if (!i18n_phonenumbers.PhoneMetadataCollection.descriptor_) {
     // The descriptor is created lazily when we instantiate a new instance.
     var descriptorObj = {
       0: {
         name: 'PhoneMetadataCollection',
-        fullName: 'i18n.phonenumbers.PhoneMetadataCollection'
+        fullName: 'i18n_phonenumbers.PhoneMetadataCollection'
       },
       1: {
         name: 'metadata',
         repeated: true,
         fieldType: goog.proto2.Message.FieldType.MESSAGE,
-        type: i18n.phonenumbers.PhoneMetadata
+        type: i18n_phonenumbers.PhoneMetadata
       }
     };
-    i18n.phonenumbers.PhoneMetadataCollection.descriptor_ =
+    i18n_phonenumbers.PhoneMetadataCollection.descriptor_ =
         goog.proto2.Message.createDescriptor(
-             i18n.phonenumbers.PhoneMetadataCollection, descriptorObj);
+             i18n_phonenumbers.PhoneMetadataCollection, descriptorObj);
   }
-  return i18n.phonenumbers.PhoneMetadataCollection.descriptor_;
+  return i18n_phonenumbers.PhoneMetadataCollection.descriptor_;
 };
 
 
 // Export getDescriptor static function robust to minification.
-i18n.phonenumbers.PhoneMetadataCollection['ctor'] = i18n.phonenumbers.PhoneMetadataCollection;
-i18n.phonenumbers.PhoneMetadataCollection['ctor'].getDescriptor =
-    i18n.phonenumbers.PhoneMetadataCollection.prototype.getDescriptor;
+i18n_phonenumbers.PhoneMetadataCollection['ctor'] = i18n_phonenumbers.PhoneMetadataCollection;
+i18n_phonenumbers.PhoneMetadataCollection['ctor'].getDescriptor =
+    i18n_phonenumbers.PhoneMetadataCollection.prototype.getDescriptor;

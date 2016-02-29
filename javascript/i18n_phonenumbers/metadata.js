@@ -21,7 +21,7 @@
  * @author Nikolaos Trogkanis
  */
 
-goog.provide('i18n.phonenumbers.metadata');
+goog.provide('i18n_phonenumbers.metadata');
 
 /**
  * A mapping from a country calling code to the region codes which denote the
@@ -30,7 +30,7 @@ goog.provide('i18n.phonenumbers.metadata');
  * indicated with "isMainCountryForCode" in the metadata should be first.
  * @type {!Object.<number, Array.<string>>}
  */
-i18n.phonenumbers.metadata.countryCodeToRegionCodeMap = {
+i18n_phonenumbers.metadata.countryCodeToRegionCodeMap = {
 1:["US","AG","AI","AS","BB","BM","BS","CA","DM","DO","GD","GU","JM","KN","KY","LC","MP","MS","PR","SX","TC","TT","VC","VG","VI"]
 ,7:["RU","KZ"]
 ,20:["EG"]
@@ -251,7 +251,7 @@ i18n.phonenumbers.metadata.countryCodeToRegionCodeMap = {
  * A mapping from a region code to the PhoneMetadata for that region.
  * @type {!Object.<string, Array>}
  */
-i18n.phonenumbers.metadata.countryToMetadata = {
+i18n_phonenumbers.metadata.countryToMetadata = {
 "AC":[,[,,"[46]\\d{4}|[01589]\\d{5}","\\d{5,6}"]
 ,[,,"6[2-467]\\d{3}","\\d{5}",,,"62889"]
 ,[,,"4\\d{4}","\\d{5}",,,"40123"]
