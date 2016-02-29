@@ -294,10 +294,10 @@ public class BuildMetadataFromXml {
   }
 
   /**
-   *  Extracts the available formats from the provided DOM element. If it does not contain any
-   *  nationalPrefixFormattingRule, the one passed-in is retained. The nationalPrefix,
-   *  nationalPrefixFormattingRule and nationalPrefixOptionalWhenFormatting values are provided from
-   *  the parent (territory) element.
+   * Extracts the available formats from the provided DOM element. If it does not contain any
+   * nationalPrefixFormattingRule, the one passed-in is retained; similarly for
+   * nationalPrefixOptionalWhenFormatting. The nationalPrefix, nationalPrefixFormattingRule and
+   * nationalPrefixOptionalWhenFormatting values are provided from the parent (territory) element.
    */
   // @VisibleForTesting
   static void loadAvailableFormats(PhoneMetadata metadata,
